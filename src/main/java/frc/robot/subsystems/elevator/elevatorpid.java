@@ -9,6 +9,7 @@ import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.controls.Follower;
 import com.ctre.phoenix6.controls.MotionMagicVoltage;
 import com.ctre.phoenix6.controls.VoltageOut;
+import com.ctre.phoenix6.hardware.CANcoder;
 import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -35,6 +36,7 @@ public class elevatorpid extends SubsystemBase {
   MotionMagicConfigs motionMagicConfigs = cfg.MotionMagic;
   final MotionMagicVoltage m_request = new MotionMagicVoltage(0);
   final MotionMagicVoltage m_request1 = new MotionMagicVoltage(0);
+  private CANcoder hi = new CANcoder(1);
 
   private enum ElevatorState {
     MOVING, // using Motion Magic to drive to a setpoint
@@ -79,6 +81,9 @@ public class elevatorpid extends SubsystemBase {
     slot0.kP = 1.5; // A position error of 2.5 rotations results in 12 V output
     slot0.kI = 0.1; // no output for integrated error
     slot0.kD = 0; // A velocity error of 1 rps results in 0.1 V output
+
+    // cfg.Feedback.FeedbackSensorSource = FeedbackSensorSourceValue.FusedCANcoder;
+    // cfg.Feedback.FeedbackRemoteSensorID = hi.getDeviceID();
 
     motionMagicConfigs.MotionMagicCruiseVelocity = 100; // Target cruise velocity of 80 rps
     motionMagicConfigs.MotionMagicAcceleration =
