@@ -1,4 +1,3 @@
-
 // Copyright (c) 2025 FRC 5712
 //
 // Use of this source code is governed by an MIT-style

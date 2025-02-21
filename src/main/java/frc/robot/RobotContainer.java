@@ -88,7 +88,7 @@ public class RobotContainer {
                 "FrontRight",
                 new Transform3d(
                     new Translation3d(0.2, 0.0, 0.8),
-                    new Rotation3d(0, Math.toRadians(20), Math.toRadians(0))),
+                    new Rotation3d(0, Math.toRadians(20), Math.toRadians(5))),
                 drivetrain::getVisionParameters),
             new VisionIOLimelight("limelight-fr", drivetrain::getVisionParameters),
             new VisionIOLimelight("limelight-bl", drivetrain::getVisionParameters),

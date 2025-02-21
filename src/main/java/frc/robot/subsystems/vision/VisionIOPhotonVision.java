@@ -34,6 +34,10 @@ public class VisionIOPhotonVision implements VisionIO {
     this.visionParams = visionParams;
   }
 
+  public void cam1() {
+    if (camera.getName().equals("FrontRight")) {}
+  }
+
   @Override
   public void updateInputs(VisionIOInputs inputs) {
     inputs.connected = camera.isConnected();
