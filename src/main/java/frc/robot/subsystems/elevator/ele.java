@@ -43,7 +43,7 @@
 //   private final TalonFX m_follower = new TalonFX(14, "Drivetrain");
 
 //   TalonFXConfiguration m_config = new TalonFXConfiguration();
-//   private final Slot0Configs m_slot0 = m_config.Slot0;
+//   private fin    al Slot0Configs m_slot0 = m_config.Slot0;
 //   MotionMagicConfigs m_motionMagicConfigs = m_config.MotionMagic;
 //   // Create a MotionMagicVoltage request (start at 0)
 //   final MotionMagicVoltage m_motionMagicRequest = new MotionMagicVoltage(0);

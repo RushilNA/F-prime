@@ -1,0 +1,37 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "4L4 Part1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "4L4 Part2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "4L4 Part3"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Copy of 4L4 Part2"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}
